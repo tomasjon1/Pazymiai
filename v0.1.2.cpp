@@ -11,6 +11,13 @@ using std::endl;
 using std::string;
 using std::vector;
 
+// TODO LIST
+// 1. REMOVE homeWorkAmount use .size() instead
+// 2. DIVIDE calc funtions into 3 functions
+// 3. Make generation work with CLASS
+// 4. MOVE OTHER FUNCTIONS INTO app Object
+// 5. DELETE UNUSED SETTERS GETTERS
+
 
 class Student {
 private:
@@ -32,18 +39,19 @@ public:
     void sethomeWork(int homeWork)              { this->homeWork.push_back(homeWork); }
     void sethomeWorkAmount(int homeWorkAmount)  { this->homeWorkAmount = homeWorkAmount; }
     void setexam(int exam)                      { this->exam = exam; }
-    void setrez(double rez)                        { this->rez = rez; }
+    void setrez(double rez)                     { this->rez = rez; }
    
     string getFirstName()                       { return this->firstName; }
     string getlastName()                        { return this->lastName; }
     int gethomeWorkAmount()                     { return this->homeWorkAmount; }
-    vector<int> gethomeWork()                           { return this->homeWork; }
+    vector<int> gethomeWork()                   { return this->homeWork; }
     int getexam()                               { return this->exam; }
-    double getrez()                                { return this->rez; }
+    double getrez()                             { return this->rez; }
 
     void calculateMedian() {
         std::sort(this->homeWork.begin(), this->homeWork.end());
         if (this->homeWorkAmount % 2 != 0)
+            // MOVE THIS INTO SEPERATE FUNCTION
             this->rez = 0.4 * (double) this->homeWork[this->homeWorkAmount / 2] + 0.6 * this->exam;
         else
             this->rez = 0.4 * (((double)(this->homeWork[(this->homeWorkAmount - 1) / 2] + this->homeWork[this->homeWorkAmount / 2]) / 2.0) + 0.6 * this->exam);
@@ -54,16 +62,6 @@ public:
         this->rez = (0.4 * (this->rez / this->homeWorkAmount)) + 0.6 * this->exam;
     }
 };
-
-//struct studentas {
-//    string vardas = "";
-//    string pavarde = "";
-//    int *pazymiai = nullptr;
-//    int pazymiuKiekis = 0;
-//    int egzaminas;
-//    double rezultatas = 0;
-//};
-
 Student ivedimas( bool generavimas);
 void isvedimas(Student& data, bool mediana);
 int ivestoSkaiciausPatikrinimas();
@@ -164,27 +162,6 @@ Student ivedimas(bool generavimas) {
     return student;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 void isvedimas(Student& data, bool mediana) {
     cout << std::setw(20) << data.getFirstName() << std::setw(20) << data.getlastName();
 
@@ -193,6 +170,17 @@ void isvedimas(Student& data, bool mediana) {
  
     cout << std::setw(20) << data.getrez() << endl;
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 int ivestoSkaiciausPatikrinimas()
