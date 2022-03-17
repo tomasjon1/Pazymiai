@@ -19,8 +19,7 @@ private:
     vector<int> homeWork;
     int homeWorkAmount = 0;
     int exam = 0;
-    int rezMed = 0;
-    int rezAvg = 0;
+    double rez = 0;
 
 public:
     Student(string firstName, string lastName) { 
@@ -33,23 +32,28 @@ public:
     void sethomeWork(int homeWork)              { this->homeWork.push_back(homeWork); }
     void sethomeWorkAmount(int homeWorkAmount)  { this->homeWorkAmount = homeWorkAmount; }
     void setexam(int exam)                      { this->exam = exam; }
-    void setrezMed(int rezMed)                  { this->rezMed = rezMed; }
-    void setrezAvg(int rezAvg)                  { this->rezAvg = rezAvg; }
-
+    void setrez(double rez)                        { this->rez = rez; }
+   
     string getFirstName()                       { return this->firstName; }
     string getlastName()                        { return this->lastName; }
     int gethomeWorkAmount()                     { return this->homeWorkAmount; }
+    vector<int> gethomeWork()                           { return this->homeWork; }
     int getexam()                               { return this->exam; }
-    int getrezMed()                             { return this->rezMed; }
-    int getrezAvg()                             { return this->rezAvg; }
+    double getrez()                                { return this->rez; }
+
+    void calculateMedian() {
+        std::sort(this->homeWork.begin(), this->homeWork.end());
+        if (this->homeWorkAmount % 2 != 0)
+            this->rez = 0.4 * (double) this->homeWork[this->homeWorkAmount / 2] + 0.6 * this->exam;
+        else
+            this->rez = 0.4 * (((double)(this->homeWork[(this->homeWorkAmount - 1) / 2] + this->homeWork[this->homeWorkAmount / 2]) / 2.0) + 0.6 * this->exam);
+    }
+
+    void calculateAvarage() {
+        for (int x = 0; x < this->homeWorkAmount; x++) this->rez += this->homeWork[x] * 1.0;
+        this->rez = (0.4 * (this->rez / this->homeWorkAmount)) + 0.6 * this->exam;
+    }
 };
-
-//int main() {
-//    Student stud("tomas", "jon");
-//
-//    cout << stud.getFirstName();
-//}
-
 
 //struct studentas {
 //    string vardas = "";
@@ -59,9 +63,9 @@ public:
 //    int egzaminas;
 //    double rezultatas = 0;
 //};
-//
+
 Student ivedimas( bool generavimas);
-//void isvedimas(studentas& data, bool mediana);
+void isvedimas(Student& data, bool mediana);
 int ivestoSkaiciausPatikrinimas();
 string atsakymoIvedinimoPatikrinimas();
 bool pazymioPatikrinimas(int n);
@@ -124,10 +128,10 @@ int main()
         }
     }*/
      
-   /* if(mediana) cout << std::setw(20) << "VARDAS" << std::setw(20) << "PAVARDE" << std::setw(20) << "GALUTINS (Med.)" << endl;
+    if(mediana) cout << std::setw(20) << "VARDAS" << std::setw(20) << "PAVARDE" << std::setw(20) << "GALUTINS (Med.)" << endl;
     else        cout << std::setw(20) << "VARDAS" << std::setw(20) << "PAVARDE" << std::setw(20) << "GALUTINS (Vid.)" << endl;
 
-    for (studentas studentas : studentai) isvedimas(studentas, mediana);*/
+    for (Student studentas : studentai) isvedimas(studentas, mediana);
 
     
 }
@@ -160,25 +164,37 @@ Student ivedimas(bool generavimas) {
     return student;
 }
 
-//void isvedimas(studentas& data, bool mediana) {
-//    cout << std::setw(20) << data.vardas << std::setw(20) << data.pavarde;
-//
-//    if (mediana) {
-//        std::sort(data.pazymiai, data.pazymiai + data.pazymiuKiekis);
-//        if (data.pazymiuKiekis % 2 !=  0)
-//            data.rezultatas = 0.4 * (double)data.pazymiai[data.pazymiuKiekis / 2] + 0.6 * data.egzaminas;
-//        else
-//            data.rezultatas = 0.4 * ((double)(data.pazymiai[(data.pazymiuKiekis - 1) / 2] + data.pazymiai[data.pazymiuKiekis / 2]) / 2.0) + 0.6 * data.egzaminas;
-//    }
-//    else {
-//        for (int x = 0; x < data.pazymiuKiekis; x++) data.rezultatas += data.pazymiai[x] * 1.0;
-//        data.rezultatas = (0.4 * (data.rezultatas / data.pazymiuKiekis)) + 0.6 * data.egzaminas;
-//    }
-//    cout << std::setw(20) << data.rezultatas << endl;
-//
-//    delete[] data.pazymiai;
-//}
-//
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+void isvedimas(Student& data, bool mediana) {
+    cout << std::setw(20) << data.getFirstName() << std::setw(20) << data.getlastName();
+
+    if (mediana) data.calculateMedian();
+    else data.calculateAvarage();
+ 
+    cout << std::setw(20) << data.getrez() << endl;
+}
+
+
 int ivestoSkaiciausPatikrinimas()
 {
     int n;
