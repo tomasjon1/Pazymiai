@@ -65,7 +65,10 @@ int main()
                 string pav;
                 cin >> pav;
                 pav = pav + ".txt";
+                auto genStart = hrClock::now();
                 bufer_read(studentai, pav);
+                cout << "Failo nuskaitymo laikas: " << durationDouble(hrClock::now() - genStart).count() << " s" << endl;
+
             }
             catch (std::exception& e)
             {
