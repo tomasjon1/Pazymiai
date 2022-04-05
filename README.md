@@ -24,25 +24,31 @@ Norint pasinaudoti šia programa, Jums reikia įsijungti terminal. Su komanda cd
 ## Rezultatai
 -------------------------
 1000 irasu testavimas
-Failo nuskaitymo laikas: 0.0110827 s
-Studentu dalinimo i dvi grupes laikas: 0.0026741 s
-Surusiuotu studentu isvedimas i naujus failus uztruko: 0.0878166 s
+- Failo nuskaitymo laikas: 0.0110827 s
+- Studentu dalinimo i dvi grupes laikas: 0.0026741 s
+- Surusiuotu studentu isvedimas i naujus failus uztruko: 0.0878166 s
 -------------------------
 -------------------------
 1000 irasu testavimas
-Failo nuskaitymo laikas: 0.0110827 s
-Studentu dalinimo i dvi grupes laikas: 0.0026741 s
-Surusiuotu studentu isvedimas i naujus failus uztruko: 0.0878166 s
+- Failo nuskaitymo laikas: 0.0110827 s
+- Studentu dalinimo i dvi grupes laikas: 0.0026741 s
+- Surusiuotu studentu isvedimas i naujus failus uztruko: 0.0878166 s
 -------------------------
 -------------------------
 100000 irasu testavimas
-Failo nuskaitymo laikas: 0.431275 s
-Studentu dalinimo i dvi grupes laikas: 0.170179 s
-Surusiuotu studentu isvedimas i naujus failus uztruko: 0.0205422 s
+- Failo nuskaitymo laikas: 0.431275 s
+- Studentu dalinimo i dvi grupes laikas: 0.170179 s
+- Surusiuotu studentu isvedimas i naujus failus uztruko: 0.0205422 s
 -------------------------
 -------------------------
 1000000 irasu testavimas
-Failo nuskaitymo laikas: 4.12961 s
-Studentu dalinimo i dvi grupes laikas: 1.87691 s
-Surusiuotu studentu isvedimas i naujus failus uztruko: 0.227077 s
+- Failo nuskaitymo laikas: 4.12961 s
+- Studentu dalinimo i dvi grupes laikas: 1.87691 s
+- Surusiuotu studentu isvedimas i naujus failus uztruko: 0.227077 s
+-------------------------
+-------------------------
+10000000 irasu testavimas
+- Failo nuskaitymo laikas: 41.3282 s
+- Studentu dalinimo i dvi grupes laikas: 19.2665 s
+- Surusiuotu studentu isvedimas i naujus failus uztruko: 1.9313 s
 -------------------------
