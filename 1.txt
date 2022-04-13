@@ -1,0 +1,2 @@
+Vardas              Pavarde             ND1    Egz    
+Nomedas             Jankauskas          10     10     

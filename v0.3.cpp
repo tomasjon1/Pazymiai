@@ -12,7 +12,7 @@ using durationDouble = std::chrono::duration<double>;
 
 int main()
 {
- 
+
     auto programStart = hrClock::now();
 
     srand(time(NULL));
@@ -31,12 +31,19 @@ int main()
 
     vector<studentas> studentai;
 
-    cout << "Ar notire studentus nuskaityti is failo (taip/ne): "; atsFailoSkaitymas = atsakymoIvedinimoPatikrinimas();
-        
-    if (atsFailoSkaitymas == "taip") {
+    cout << "Ar notire studentus nuskaityti is failo (taip/ne): ";
+    atsFailoSkaitymas = atsakymoIvedinimoPatikrinimas();
 
-        cout << "Ar notire studentu duomenis sugeneruoti (taip/ne): "; atsFailoGeneravimas = atsakymoIvedinimoPatikrinimas();
-        if (atsFailoGeneravimas == "taip") {
+    if (atsFailoSkaitymas == "taip")
+    {
+
+        cout << "Ar notire studentu duomenis sugeneruoti (taip/ne): ";
+        atsFailoGeneravimas = atsakymoIvedinimoPatikrinimas();
+        cout << "Kokia strategija norite naudoti? Jei taupyti laika iveskite 1 (1 strategija), jei taupyti atminti iveskite 2 (2 strategija)." << endl;
+        int strategijosRez = ivestoSkaiciausPatikrinimas();
+
+        if (atsFailoGeneravimas == "taip")
+        {
 
             cin.ignore();
             cout << "Koks turetu buti failo pavadinimas?(studentai.txt by default): ";
@@ -57,57 +64,76 @@ int main()
 
             bufer_read(studentai, genFile_name);
         }
-        else {
+        else
+        {
             vector<string> antrastineEilute;
 
             try
             {
                 bufer_read(studentai, "studentai.txt");
             }
-            catch (std::exception& e)
+            catch (std::exception &e)
             {
                 cout << "Failas nerastas" << endl;
             }
         }
 
         galutiniai(studentai);
+        std::sort(studentai.begin(), studentai.end(), [](studentas &a, studentas &b)
+                  { return a.vardas < b.vardas; });
 
-        std::sort(studentai.begin(), studentai.end(), [](studentas& a, studentas& b) { return a.vardas < b.vardas; });
+        vector<studentas> vargsai;
 
-        auto sortStart = hrClock::now();
-        std::stringstream kietiakai;
-        std::stringstream vargsai;
-        sortStudents(kietiakai, vargsai, studentai);
-        cout << "Studentu dalinimo i dvi grupes laikas: " << durationDouble(hrClock::now() - sortStart).count() << " s" << endl;
-
-        auto newWrite = hrClock::now();
-        ssToFile("kietiakai.txt", kietiakai);
-        ssToFile("vargsai.txt", vargsai);
-        cout << "Surusiuotu studentu isvedimas i naujus failus uztruko: " << durationDouble(hrClock::now() - newWrite).count() << " s" << endl;
-
+        if (strategijosRez = 1)
+        {
+            vector<studentas> kietiakai;
+            auto sortStart = hrClock::now();
+            sortStudents(kietiakai, vargsai, studentai);
+            cout << "Studentu dalinimo i dvi grupes laikas: " << durationDouble(hrClock::now() - sortStart).count() << " s" << endl;
+            auto newWrite = hrClock::now();
+            vectorTofile("kietiakai.txt", kietiakai);
+            vectorTofile("vargsai.txt", vargsai);
+            cout << "Surusiuotu studentu isvedimas i naujus failus uztruko: " << durationDouble(hrClock::now() - newWrite).count() << " s" << endl;
+        }
+        else
+        {
+            auto sortStart = hrClock::now();
+            sortStudents2(studentai, vargsai);
+            cout << "Studentu dalinimo i dvi grupes laikas: " << durationDouble(hrClock::now() - sortStart).count() << " s" << endl;
+            auto newWrite = hrClock::now();
+            vectorTofile("kietiakai.txt", studentai);
+            vectorTofile("vargsai.txt", vargsai);
+            cout << "Surusiuotu studentu isvedimas i naujus failus uztruko: " << durationDouble(hrClock::now() - newWrite).count() << " s" << endl;
+        }
     }
     else
     {
-        cout << "Ar studentu skaicius yra zinomas (taip/ne): "; atsStudentuSkaicius = atsakymoIvedinimoPatikrinimas();
-        cout << "Ar notire namu darbu pazymius generuoti automatiskai (taip/ne): "; atsGeneravimas = atsakymoIvedinimoPatikrinimas();
+        cout << "Ar studentu skaicius yra zinomas (taip/ne): ";
+        atsStudentuSkaicius = atsakymoIvedinimoPatikrinimas();
+        cout << "Ar notire namu darbu pazymius generuoti automatiskai (taip/ne): ";
+        atsGeneravimas = atsakymoIvedinimoPatikrinimas();
         cout << endl;
 
-        if (atsStudentuSkaicius == "taip") {
+        if (atsStudentuSkaicius == "taip")
+        {
             cout << "Studentu skaicius yra zinomas" << endl;
             studentuSkaicius = true;
         }
-        else cout << "Studentu skaicius yra nezinomas" << endl;
+        else
+            cout << "Studentu skaicius yra nezinomas" << endl;
 
-        if (atsGeneravimas == "taip") {
+        if (atsGeneravimas == "taip")
+        {
             cout << "Namu darbu pazymiai bus genereruojami" << endl;
             generavimas = true;
         }
-        else cout << "Namudarbu pazymiai nebus genereruojami" << endl;
-
+        else
+            cout << "Namudarbu pazymiai nebus genereruojami" << endl;
 
         if (studentuSkaicius)
         {
-            cout << "Iveskite studentu kieki: "; studentuKiekis = ivestoSkaiciausPatikrinimas();
+            cout << "Iveskite studentu kieki: ";
+            studentuKiekis = ivestoSkaiciausPatikrinimas();
             for (int x = 0; x < studentuKiekis; x++)
             {
                 studentas temp;
@@ -118,19 +144,21 @@ int main()
         else
         {
             string ats;
-            while (true) {
+            while (true)
+            {
                 studentas temp;
                 ivedimas(temp, generavimas);
                 studentai.push_back(temp);
-                cout << "Ar notire ivesti dar studenta (taip/ne): "; ats = atsakymoIvedinimoPatikrinimas();
+                cout << "Ar notire ivesti dar studenta (taip/ne): ";
+                ats = atsakymoIvedinimoPatikrinimas();
                 if (ats == "ne")
                     break;
             }
         }
 
-
         galutiniai(studentai);
-        std::sort(studentai.begin(), studentai.end(), [](studentas& a, studentas& b) { return a.vardas < b.vardas; });
+        std::sort(studentai.begin(), studentai.end(), [](studentas &a, studentas &b)
+                  { return a.vardas < b.vardas; });
         bufer_write(studentai);
     }
 

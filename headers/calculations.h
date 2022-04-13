@@ -3,5 +3,6 @@
 #include "data.h"
 #include "validation.h"
 
-void galutiniai(vector<studentas>& studentai);
-void sortStudents(std::stringstream& kietiakai, std::stringstream& vargsai, vector<studentas>& studentai);
+void galutiniai(vector<studentas> &studentai);
+void sortStudents(vector<studentas> &kietiakai, vector<studentas> &vargsai, vector<studentas> &studentai);
+void sortStudents2(vector<studentas> &kietiakai, vector<studentas> &vargsai);
