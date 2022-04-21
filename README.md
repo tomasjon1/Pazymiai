@@ -14,41 +14,8 @@ Norint pasinaudoti šia programa, Jums reikia įsijungti terminal. Su komanda cd
 - Pasirinkti ar norite matyti automatiškai sugeneruotus duomenis, turėsite įvesti studentų vardus ir pavardes bei namų darbų kiekį vienam studentui.
 - Pasirinkus įvesti duomenis patiems, turėsite įvesti šįuos duomenis: studentų vardus, pavardes, jų namų darbų kiekį, pažymius ir egzamino pažymį).
 
+(Pažymių vidurkis sudaromis vadovaujantis šia formule: galutinis = 0.4 * vidurkis + 0.6 * egzaminas)<br>
+(Pažymių mediana sudaroma vadovaujantis šia formule: mediana = 0.4 * pažymių mediana + 0.6 * egzaminas)<br>
+
 ### Pasirinkus šiuos nustatymus matysite sudarytą lentelę su studentu pavardėmis, vardais ir pažymių vidurkiais ir/arba medianomis.
 
-## PC stats
-- CPU Intel Core i7-8750H
-- RAM 16
-- SSD 500GB
-
-## Rezultatai
--------------------------
-1000 irasu testavimas
-- Failo nuskaitymo laikas: 0.0110827 s
-- Studentu dalinimo i dvi grupes laikas: 0.0026741 s
-- Surusiuotu studentu isvedimas i naujus failus uztruko: 0.0878166 s
--------------------------
--------------------------
-1000 irasu testavimas
-- Failo nuskaitymo laikas: 0.0110827 s
-- Studentu dalinimo i dvi grupes laikas: 0.0026741 s
-- Surusiuotu studentu isvedimas i naujus failus uztruko: 0.0878166 s
--------------------------
--------------------------
-100000 irasu testavimas
-- Failo nuskaitymo laikas: 0.431275 s
-- Studentu dalinimo i dvi grupes laikas: 0.170179 s
-- Surusiuotu studentu isvedimas i naujus failus uztruko: 0.0205422 s
--------------------------
--------------------------
-1000000 irasu testavimas
-- Failo nuskaitymo laikas: 4.12961 s
-- Studentu dalinimo i dvi grupes laikas: 1.87691 s
-- Surusiuotu studentu isvedimas i naujus failus uztruko: 0.227077 s
--------------------------
--------------------------
-10000000 irasu testavimas
-- Failo nuskaitymo laikas: 41.3282 s
-- Studentu dalinimo i dvi grupes laikas: 19.2665 s
-- Surusiuotu studentu isvedimas i naujus failus uztruko: 1.9313 s
--------------------------

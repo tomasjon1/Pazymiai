@@ -14,25 +14,17 @@ void galutiniai(deque<studentas>& studentai)
     }
 }
 
-void sortStudents(std::stringstream& kietiakai, std::stringstream& vargsai, deque<studentas>& studentai)
+void sortStudents(deque<studentas>& kietiakai, deque<studentas>& vargsai, deque<studentas>& studentai)
 {
     for (auto& stud : studentai)
     {
-        if (stud.rezultatasVid < 5)
+        if (stud.rezultatasVid < 5 || stud.rezultatasVid < 5)
         {
-            vargsai << std::left << std::setw(20) << stud.vardas;
-            vargsai << std::left << std::setw(20) << stud.pavarde;
-            vargsai << std::left << std::setw(20) << stud.rezultatasVid;
-            vargsai << std::left << std::setw(20) << stud.rezultatasMed;
-            vargsai << endl;
+            vargsai.push_back(stud);
         }
         else
         {
-            kietiakai << std::left << std::setw(20) << stud.vardas;
-            kietiakai << std::left << std::setw(20) << stud.pavarde;
-            kietiakai << std::left << std::setw(20) << stud.rezultatasVid;
-            kietiakai << std::left << std::setw(20) << stud.rezultatasMed;
-            kietiakai << endl;
+            kietiakai.push_back(stud);
         }
     }
     studentai.clear();
