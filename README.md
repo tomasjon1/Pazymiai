@@ -19,3 +19,34 @@ Norint pasinaudoti šia programa, Jums reikia įsijungti terminal. Su komanda cd
 
 ### Pasirinkus šiuos nustatymus matysite sudarytą lentelę su studentu pavardėmis, vardais ir pažymių vidurkiais ir/arba medianomis.
 
+-------------------------
+1000 irasu testavimas
+Failo nuskaitymo laikas: 0.0180054 s
+Studentu dalinimo i dvi grupes laikas: 0.0013585 s
+Surusiuotu studentu isvedimas i naujus failus uztruko: 0.0053357 s
+-------------------------
+-------------------------
+10000 irasu testavimas
+Failo nuskaitymo laikas: 0.0593331 s
+Studentu dalinimo i dvi grupes laikas: 0.0202382 s
+Surusiuotu studentu isvedimas i naujus failus uztruko: 0.0607152 s
+-------------------------
+-------------------------
+100000 irasu testavimas
+Failo nuskaitymo laikas: 0.295306 s
+Studentu dalinimo i dvi grupes laikas: 0.0871569 s
+Surusiuotu studentu isvedimas i naujus failus uztruko: 0.15996 s
+-------------------------
+-------------------------
+1000000 irasu testavimas
+Failo nuskaitymo laikas: 3.34229 s
+Studentu dalinimo i dvi grupes laikas: 1.03777 s
+Surusiuotu studentu isvedimas i naujus failus uztruko: 1.58053 s
+-------------------------
+-------------------------
+10000000 irasu testavimas
+Failo nuskaitymo laikas: 35.2251 s
+Studentu dalinimo i dvi grupes laikas: 11.5859 s
+Surusiuotu studentu isvedimas i naujus failus uztruko: 15.9421 s
+-------------------------
+
