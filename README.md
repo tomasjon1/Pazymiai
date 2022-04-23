@@ -30,6 +30,8 @@ Versijoje [v0.4](https://github.com/tomasjon1/Pazymiai/tree/v0.4):
 - RAM 16
 - SSD 500GB
 
+## Rezultatai
+
 | Dydis  | Failo Generavimas | Studentu dalinimas  | isvedimas i failus | Programos veikimo laikas |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | 1000  | 0.0090721 s  | 0.0009283 s  | 0.0265609 s  |  12.5268 s  |
