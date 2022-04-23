@@ -7,7 +7,7 @@
 ### Šioje versijoje yra naudojamas konteineris deque.
 
 ### Kaip paleisti programą?<br>
-Versijoje [v0.5.1](https://github.com/tomasjon1/Pazymiai/tree/v0.4):
+Versijoje [v0.5.1](https://github.com/tomasjon1/Pazymiai/tree/v0.5.1):
 - Jums reikia įsijungti terminal.
 - Su komanda cd nueiti iki savo v0.4.cpp failo. 
 - Įrašyti `g++ -o main -I . -I ./cpp *.cpp cpp/*.cpp`komandą.
