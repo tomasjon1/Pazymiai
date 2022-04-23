@@ -173,6 +173,21 @@ Versijoje [v0.5.2](https://github.com/tomasjon1/Pazymiai/tree/v0.5.2):
 ### Pasirinkus duomenu ivedima ranka
 - Matysite sudarytą lentelę su studentu pavardėmis, vardais ir pažymių vidurkiais ir medianomis "rez.txt" faile.
 
+## PC stats
+- CPU Intel Core i7-8750H
+- RAM 16
+- SSD 500GB
+
+## Rezultatai
+
+| Dydis  | Failo nuskaitymas | Studentu dalinimas  | isvedimas i failus |
+| ------------- | ------------- | ------------- | ------------- |
+| 1000  | 0.0170497 s  | 0.0013448 s  | 0.110706 s  |
+| 10000  | 0.0573852 s  | 0.0049649 s  | 0.0395351 s  |
+| 100000  | 0.350059 s  | 0.0965414 s  | 0.182653 s  |
+| 1000000  | 3.8139 s  | 1.75111 s  | 4.24782 s  |
+| 10000000  | 62.4652 s  | 11.5866 s  | 16.2664 s  |
+
 ## V1.0
 ### V1.0.1
 ### V1.0.2
