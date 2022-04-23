@@ -5,9 +5,7 @@
 # Programa skirta studentų pažymių vidurkiui ir medianai apskaičiuoti.
 
 ### Kaip paleisti programą?<br>
-Versijoje [v0.1.1](https://github.com/domastyd/Pazymys/blob/v0.1/v0.1.1.cpp) yra naudojami C tipo masyvai. Tačiau, rekomenduojama naudoti programos [v0.1.2](https://github.com/domastyd/Pazymys/blob/v0.1/v0.1.2.cpp) versiją. Joje yra naudojami vector tipo konteineriai, kurie paspartina programos veiklą. 
-
-### Norint pasinaudoti šia programa 
+Versijoje [v0.1.1](https://github.com/domastyd/Pazymys/blob/v0.1/v0.1.1.cpp):
 - Jums reikia įsijungti terminal. 
 - Su komanda cd nueiti iki savo v0.1.2.cpp failo 
 - Įrašyti `g++ -o main v0.1.2.cpp` komandą ir kai programa bus sukompiliuota,
