@@ -58,5 +58,6 @@ Visos programos veikimo laikas: 7.61452 s
 Failo generavimo laikas: 16.7132 s
 Studentu dalinimo i dvi grupes laikas: 6.11869 s
 Surusiuotu studentu isvedimas i naujus failus uztruko: 15.3828 s
+
 Visos programos veikimo laikas: 103.824 s
 -------------------------
