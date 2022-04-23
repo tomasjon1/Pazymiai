@@ -5,7 +5,7 @@
 
 # Programa skirta studentų pažymių vidurkiui ir medianai apskaičiuoti.
 
-### Šioje versijoje yra naudojamas konteineris deque.
+### Šioje versijoje yra naudojamas konteineris list.
 
 ### Kaip paleisti programą?<br>
 Versijoje [v0.5.2](https://github.com/tomasjon1/Pazymiai/tree/v0.5.2):
