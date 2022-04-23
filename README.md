@@ -28,35 +28,35 @@ Versijoje [v0.5.2](https://github.com/tomasjon1/Pazymiai/tree/v0.5.1) Jums reiki
 ## Rezultatai
 -------------------------
 1000 irasu testavimas
-- Failo generavimo laikas: 0.0039739 s
-- Studentu dalinimo i dvi grupes laikas: 0.0019957 s
-- Surusiuotu studentu isvedimas i naujus failus uztruko: 0.0020235 s
-- Visos programos veikimo laikas: 15.335 s
+Failo generavimo laikas: 0.0090721 s
+Studentu dalinimo i dvi grupes laikas: 0.0009283 s
+Surusiuotu studentu isvedimas i naujus failus uztruko: 0.0265609 s
+Visos programos veikimo laikas: 12.5268 s
+-------------------------
 -------------------------
 10000 irasu testavimas
-- Failo generavimo laikas: 0.0280025 s
-- Studentu dalinimo i dvi grupes laikas: 0.0154965 s
-- Surusiuotu studentu isvedimas i naujus failus uztruko: 0.0030388 s
-- Visos programos veikimo laikas: 13.7154 s
+Failo generavimo laikas: 0.0208313 s
+Studentu dalinimo i dvi grupes laikas: 0.0044929 s
+Surusiuotu studentu isvedimas i naujus failus uztruko: 0.0224853 s
+Visos programos veikimo laikas: 6.23675 s
 -------------------------
 -------------------------
 100000 irasu testavimas
-- Failo generavimo laikas: 0.211261 s
-- Studentu dalinimo i dvi grupes laikas: 0.149178 s
-- Surusiuotu studentu isvedimas i naujus failus uztruko: 0.0187952 s
-- Visos programos veikimo laikas: 23.4999 s
+Failo nuskaitymo laikas: 0.350059 s
+Studentu dalinimo i dvi grupes laikas: 0.0965414 s
+Surusiuotu studentu isvedimas i naujus failus uztruko: 0.182653 s
 -------------------------
 -------------------------
-1000000 irasu testavimas
-- Failo generavimo laikas: 2.14655 s
-- Studentu dalinimo i dvi grupes laikas: 1.46544 s
-- Surusiuotu studentu isvedimas i naujus failus uztruko: 0.158577 s
-- Visos programos veikimo laikas: 22.1536 s
+100000 irasu testavimas
+Failo generavimo laikas: 0.164239 s
+Studentu dalinimo i dvi grupes laikas: 0.0438312 s
+Surusiuotu studentu isvedimas i naujus failus uztruko: 0.159213 s
+Visos programos veikimo laikas: 7.61452 s
 -------------------------
 -------------------------
 10000000 irasu testavimas
-- Failo generavimo laikas: 21.0265 s
-- Studentu dalinimo i dvi grupes laikas: 16.091 s
-- Surusiuotu studentu isvedimas i naujus failus uztruko: 1.69398 s
-- Visos programos veikimo laikas: 138.442 s
+Failo generavimo laikas: 16.7132 s
+Studentu dalinimo i dvi grupes laikas: 6.11869 s
+Surusiuotu studentu isvedimas i naujus failus uztruko: 15.3828 s
+Visos programos veikimo laikas: 103.824 s
 -------------------------
