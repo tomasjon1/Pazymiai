@@ -29,7 +29,7 @@ int main()
 
     string genFile_name;
 
-    vector<studentas> studentai;
+    deque<studentas> studentai;
 
     cout << "Ar notire studentus nuskaityti is failo (taip/ne): ";
     atsFailoSkaitymas = atsakymoIvedinimoPatikrinimas();
@@ -52,7 +52,6 @@ int main()
             cout << "Kiek generuoti studentu?" << endl;
             int studCount;
             studCount = ivestoSkaiciausPatikrinimas();
-            studentai.reserve(studCount);
             cout << "Kiek generuoti namu darbu?" << endl;
             int ndCount;
             ndCount = ivestoSkaiciausPatikrinimas();
@@ -82,17 +81,17 @@ int main()
         std::sort(studentai.begin(), studentai.end(), [](studentas &a, studentas &b)
                   { return a.vardas < b.vardas; });
 
-        vector<studentas> vargsai;
+        deque<studentas> vargsai;
 
         if (strategijosRez = 1)
         {
-            vector<studentas> kietiakai;
+            deque<studentas> kietiakai;
             auto sortStart = hrClock::now();
             sortStudents(kietiakai, vargsai, studentai);
             cout << "Studentu dalinimo i dvi grupes laikas: " << durationDouble(hrClock::now() - sortStart).count() << " s" << endl;
             auto newWrite = hrClock::now();
-            vectorTofile("kietiakai.txt", kietiakai);
-            vectorTofile("vargsai.txt", vargsai);
+            dequeTofile("kietiakai.txt", kietiakai);
+            dequeTofile("vargsai.txt", vargsai);
             cout << "Surusiuotu studentu isvedimas i naujus failus uztruko: " << durationDouble(hrClock::now() - newWrite).count() << " s" << endl;
         }
         else
@@ -101,8 +100,8 @@ int main()
             sortStudents2(studentai, vargsai);
             cout << "Studentu dalinimo i dvi grupes laikas: " << durationDouble(hrClock::now() - sortStart).count() << " s" << endl;
             auto newWrite = hrClock::now();
-            vectorTofile("kietiakai.txt", studentai);
-            vectorTofile("vargsai.txt", vargsai);
+            dequeTofile("kietiakai.txt", studentai);
+            dequeTofile("vargsai.txt", vargsai);
             cout << "Surusiuotu studentu isvedimas i naujus failus uztruko: " << durationDouble(hrClock::now() - newWrite).count() << " s" << endl;
         }
     }

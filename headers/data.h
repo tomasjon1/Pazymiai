@@ -1,6 +1,7 @@
 #pragma once
 
 #include <iostream>
+#include <iostream>
 #include <fstream>
 #include <iomanip>
 #include <random>
@@ -8,18 +9,19 @@
 #include <algorithm>
 #include <functional>
 #include <string>
+#include <deque>
 
-
-using std::cout;
 using std::cin;
+using std::cout;
+using std::deque;
 using std::endl;
-using std::string;
-using std::vector;
 using std::ifstream;
 using std::ofstream;
+using std::string;
+using std::vector;
 
-
-struct studentas {
+struct studentas
+{
     string vardas = "";
     string pavarde = "";
     vector<int> pazymiai;

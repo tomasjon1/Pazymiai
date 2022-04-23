@@ -1,6 +1,6 @@
 #include "../headers/calculations.h"
 
-void galutiniai(vector<studentas> &studentai)
+void galutiniai(deque<studentas> &studentai)
 {
     for (auto &data : studentai)
     {
@@ -17,7 +17,7 @@ void galutiniai(vector<studentas> &studentai)
     }
 }
 
-void sortStudents(vector<studentas> &kietiakai, vector<studentas> &vargsai, vector<studentas> &studentai)
+void sortStudents(deque<studentas> &kietiakai, deque<studentas> &vargsai, deque<studentas> &studentai)
 {
     for (auto &stud : studentai)
     {
@@ -40,7 +40,7 @@ bool isVargsas(studentas a)
     return false;
 }
 
-void sortStudents2(vector<studentas> &kietiakai, vector<studentas> &vargsai)
+void sortStudents2(deque<studentas> &kietiakai, deque<studentas> &vargsai)
 {
     copy_if(kietiakai.begin(), kietiakai.end(), back_inserter(vargsai), isVargsas);
     kietiakai.erase(remove_if(kietiakai.begin(), kietiakai.end(), isVargsas), kietiakai.end());

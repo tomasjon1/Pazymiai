@@ -44,7 +44,7 @@ int ivestiPazymi()
     }
 }
 
-void bufer_read(vector<studentas> &studentai, string file_name)
+void bufer_read(deque<studentas> &studentai, string file_name)
 {
 
     std::string line;
@@ -76,7 +76,7 @@ void bufer_read(vector<studentas> &studentai, string file_name)
     }
 }
 
-void bufer_write(vector<studentas> &studentai)
+void bufer_write(deque<studentas> &studentai)
 {
     std::stringstream outputas;
     outputas << std::left << std::setw(20) << "Vardas";
@@ -101,7 +101,7 @@ void bufer_write(vector<studentas> &studentai)
     out_f.close();
 }
 
-void vectorTofile(string file_name, vector<studentas> &data)
+void dequeTofile(string file_name, deque<studentas> &data)
 {
     std::stringstream outputas;
     outputas << std::left << std::setw(20) << "Vardas" << std::left << std::setw(20) << "Pavarde" << std::left << std::setw(20) << "Vid." << std::left << std::setw(20) << "Med." << endl;

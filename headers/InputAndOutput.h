@@ -6,6 +6,6 @@
 void ivedimas(studentas &data, bool generavimas);
 int ivestiPazymi();
 
-void bufer_read(vector<studentas> &studentai, string file_name);
-void bufer_write(vector<studentas> &studentai);
-void vectorTofile(string file_name, vector<studentas> &data);
+void bufer_read(deque<studentas> &studentai, string file_name);
+void bufer_write(deque<studentas> &studentai);
+void dequeTofile(string file_name, deque<studentas> &data);
