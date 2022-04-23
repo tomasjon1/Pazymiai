@@ -5,9 +5,7 @@
 # Programa skirta studentų pažymių vidurkiui ir medianai apskaičiuoti.
 
 ### Kaip paleisti programą?<br>
-Versijoje [v0.2](https://github.com/tomasjon1/Pazymiai/tree/v0.2) Jums reikia įsijungti terminal. Su komanda cd nueiti iki savo v0.2.cpp failo ir įrašyti "g++ -o main v0.2.cpp" komandą ir kai programa bus sukompiliuota, įrašyti "main.cpp" arba "./main".
-
-### Norint pasinaudoti šia programa 
+Versijoje [v0.2](https://github.com/tomasjon1/Pazymiai/tree/v0.2):
 - Jums reikia įsijungti terminal. 
 - Su komanda cd nueiti iki savo v0.2.cpp failo 
 - Įrašyti `g++ -o main v0.1.2.cpp` komandą ir kai programa bus sukompiliuota,
