@@ -154,12 +154,11 @@ Versijoje [v0.4](https://github.com/tomasjon1/Pazymiai/tree/v0.4):
 | List  | 0.110706  | 0.0395351 | 0.182653  | 4.24782  | 16.2664  | 
 
 ## V1.0
-### V1.0.1
-
-### Šioje versijoje yra naudojamas konteineris vector.
+### [v1.0.1](https://github.com/tomasjon1/Pazymiai/tree/v1.0.1) - Šioje versijoje yra naudojamas konteineris vector.
+### [v1.0.2](https://github.com/tomasjon1/Pazymiai/tree/v1.0.2) - Šioje versijoje yra naudojamas konteineris dequ.
+### [v1.0.3](https://github.com/tomasjon1/Pazymiai/tree/v1.0.3)  - Šioje versijoje yra naudojamas konteineris vector.
 
 ### Kaip paleisti programą?<br>
-Versijoje [v1.0.1](https://github.com/tomasjon1/Pazymiai/tree/v1.0.1):
 - Jums reikia įsijungti terminal.
 - Su komanda cd nueiti iki savo v0.4.cpp failo. 
 - Įrašyti `g++ -o main -I . -I ./cpp *.cpp cpp/*.cpp`komandą.
@@ -184,119 +183,16 @@ Versijoje [v1.0.1](https://github.com/tomasjon1/Pazymiai/tree/v1.0.1):
 - RAM 16
 - SSD 500GB
 
-## Rezultatai
-### Straregija 1
-| Dydis  | Failo Generavimas | Studentu dalinimas  | isvedimas i failus |
-| ------------- | ------------- | ------------- | ------------- |
-| 1000  | 0.0090721 s  | 0.0009283 s  | 0.0265609 s  |
-| 10000  | 0.0208313 s  | 0.0044929 s  | 0.0224853 s  |
-| 100000  | 0.350059 s  | 0.0965414 s  | 0.182653 s  |
-| 1000000  | 0.164239 s  | 0.0438312 s  | 0.159213 s  |
-| 10000000  | 16.7132 s  | 6.11869 s  | 15.3828 s  |
+### Strategija 1 - Skaidymas i grupes
+| Tipas  | 1000  | 10000 | 100000  | 1000000  | 10000000 | 
+| ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
+| Vector  | 0.0009283   | 0.0044929  | 0.0965414   | 0.0438312  | 6.11869  | 
+| Deque  | 0.0013585 | 0.0202382  | 0.0871569  |  1.0377 | 11.5859 | 
+| List  | 0.0013448  | 0.0049649| 0.0965414 | 1.75111 | 11.5866  | 
 
-### Straregija 2
-| Dydis  | Failo Generavimas | Studentu dalinimas  | isvedimas i failus |
-| ------------- | ------------- | ------------- | ------------- |
-| 1000  | 0.0032401 s  | 0.0008513 s  | 0.0038454 s  |
-| 10000  | 0.0174436 s  | 0.0050264 s  | 0.0212147. s  |
-| 100000  | 0.174682 s  | 0.0460342 s  | 0.172284 s  |
-| 1000000  |  1.63954 s  | 0.572736 s  | 1.65244 s  |
-| 10000000  | 16.6333 s  | 6.2155 s  | 15.7967 s  |
-
-### V1.0.2
-
-### Šioje versijoje yra naudojamas konteineris dequ.
-
-### Kaip paleisti programą?<br>
-Versijoje [v1.0.2](https://github.com/tomasjon1/Pazymiai/tree/v1.0.2):
-- Jums reikia įsijungti terminal.
-- Su komanda cd nueiti iki savo v0.4.cpp failo. 
-- Įrašyti `g++ -o main -I . -I ./cpp *.cpp cpp/*.cpp`komandą.
-- Įrašyti `main.cpp` arba `./main`.
-
-### Paleidus programą Jums reikės:<br>
-- Pasirinkti ar norite skaityti is failo.
-  - Pasirinkti ar norite sugeneruoti norima duomenų faila, su norimu studentu dydžiu bei pazymiu kiekiu.
-- Kitu atveju: 
-  - Pasirinkti ar studentų skaičius yra fiksuotas, su galimybė nutraukti studentų   duomenų suvedimą.
-  - Pasirinkti ar norite matyti automatiškai sugeneruotus duomenis, turėsite įvesti studentų vardus ir pavardes bei namų darbų kiekį vienam studentui.
-  - Pasirinkus įvesti duomenis patiems, turėsite įvesti šįuos duomenis: studentų vardus, pavardes, jų namų darbų kiekį, pažymius ir egzamino pažymį).
-
-### Pasirinkus skaityma is failo
-- Studentai bus surasyti i 2 skirtingus failus: Vargsiukai.txt ir Kietekai.txt
-
-### Pasirinkus duomenu ivedima ranka
-- Matysite sudarytą lentelę su studentu pavardėmis, vardais ir pažymių vidurkiais ir medianomis "rez.txt" faile.
-
-## PC stats
-- CPU Intel Core i7-8750H
-- RAM 16
-- SSD 500GB
-
-## Rezultatai
-### Straregija 1
-| Dydis  | Failo nuskaitymas | Studentu dalinimas  | isvedimas i failus |
-| ------------- | ------------- | ------------- | ------------- |
-| 1000  | 0.0180054 s  | 0.0013585 s  | 0.0053357 s  |
-| 10000  | 0.0593331 s  | 0.0202382 s  | 0.0607152 s  |
-| 100000  | 0.295306 s  | 0.0871569 s  | 0.15996 s  |
-| 1000000  | 3.34229 s  | 1.0377 s  | 1.58053 s  |
-| 10000000  | 35.2251 s  | 11.5859 s  | 15.9421 s  |
-
-### Straregija 2
-| Dydis  | Failo nuskaitymas | Studentu dalinimas  | isvedimas i failus |
-| ------------- | ------------- | ------------- | ------------- |
-| 1000  | 0.0032431 s  | 0.0008462 s  | 0.003685 s  |
-| 10000  | 0.0226204 s  | 0.0050757 s  | 0.019954 s  |
-| 100000  | 0.175029 s  | 0.0513541 s  | 0.166605 s  |
-| 1000000  | 1.60788 s  |  0.634542 s  | 1.69514 s  |
-| 10000000  | 15.6554 s  |  7.85864 s  | 17.3145 s  |
-
-### V1.0.3
-
-### Šioje versijoje yra naudojamas konteineris vector.
-
-### Kaip paleisti programą?<br>
-Versijoje [v1.0.3](https://github.com/tomasjon1/Pazymiai/tree/v1.0.3):
-- Jums reikia įsijungti terminal.
-- Su komanda cd nueiti iki savo v0.4.cpp failo. 
-- Įrašyti `g++ -o main -I . -I ./cpp *.cpp cpp/*.cpp`komandą.
-- Įrašyti `main.cpp` arba `./main`.
-
-### Paleidus programą Jums reikės:<br>
-- Pasirinkti ar norite skaityti is failo.
-  - Pasirinkti ar norite sugeneruoti norima duomenų faila, su norimu studentu dydžiu bei pazymiu kiekiu.
-- Kitu atveju: 
-  - Pasirinkti ar studentų skaičius yra fiksuotas, su galimybė nutraukti studentų   duomenų suvedimą.
-  - Pasirinkti ar norite matyti automatiškai sugeneruotus duomenis, turėsite įvesti studentų vardus ir pavardes bei namų darbų kiekį vienam studentui.
-  - Pasirinkus įvesti duomenis patiems, turėsite įvesti šįuos duomenis: studentų vardus, pavardes, jų namų darbų kiekį, pažymius ir egzamino pažymį).
-
-### Pasirinkus skaityma is failo
-- Studentai bus surasyti i 2 skirtingus failus: Vargsiukai.txt ir Kietekai.txt
-
-### Pasirinkus duomenu ivedima ranka
-- Matysite sudarytą lentelę su studentu pavardėmis, vardais ir pažymių vidurkiais ir medianomis "rez.txt" faile.
-
-## PC stats
-- CPU Intel Core i7-8750H
-- RAM 16
-- SSD 500GB
-
-## Rezultatai
-### Straregija 1
-| Dydis  | Failo nuskaitymas | Studentu dalinimas  | isvedimas i failus |
-| ------------- | ------------- | ------------- | ------------- |
-| 1000  | 0.0170497 s  | 0.0013448 s  | 0.110706 s  |
-| 10000  | 0.0573852 s  | 0.0049649 s  | 0.0395351 s  |
-| 100000  | 0.350059 s  | 0.0965414 s  | 0.182653 s  |
-| 1000000  | 3.8139 s  | 1.75111 s  | 4.24782 s  |
-| 10000000  | 62.4652 s  | 11.5866 s  | 16.2664 s  |
-
-### Straregija 2
-| Dydis  | Failo nuskaitymas | Studentu dalinimas  | isvedimas i failus |
-| ------------- | ------------- | ------------- | ------------- |
-| 1000  | 0.0078918 s  | 0.000836 s  | 0.0041711 s  |
-| 10000  | 0.0379479 s  | 0.0052456 s  | 0.0254038 s  |
-| 100000  | 0.295474 s  | 0.073191 s  | 0.174366 s  |
-| 1000000  | 3.23817 s  | 0.848364 s  | 1.63405 s  |
-| 10000000  | 29.0972 s  | 9.77008 s  | 16.4438 s  |
+### Strategija 2 - Skaidymas i grupes
+| Tipas  | 1000  | 10000 | 100000  | 1000000  | 10000000 | 
+| ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
+| Vector  | 0.0008513   | 0.0050264  | 0.046034   | 0.572736  | 6.2155  | 
+| Deque  | 0.0008462  | 0.0050757 | 0.0513541  | 0.634542 | 7.85864 | 
+| List  | 0.000836  | 0.0052456 | 0.073191  | 0.848364 | 9.77008 | 
